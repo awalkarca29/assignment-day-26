@@ -27,9 +27,9 @@ Proyek ini adalah aplikasi backend untuk manajemen inventaris menggunakan **Go (
 
 1. Masuk ke MySQL menggunakan terminal atau aplikasi MySQL Anda:
 
-   ```bash
-   mysql -u root -p
-   ```
+```bash
+mysql -u root -p
+```
 
 2. Buat database baru dengan nama assignment_day_26:
 

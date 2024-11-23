@@ -1,5 +1,3 @@
-create database assignment_day_26;
-
 CREATE TABLE Produk (
     id_produk INT PRIMARY KEY AUTO_INCREMENT,
     nama VARCHAR(255) NOT NULL,
