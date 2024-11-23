@@ -1,0 +1,277 @@
+{
+	"info": {
+		"_postman_id": "6b564983-babd-4c13-a8eb-375e661513dc",
+		"name": "Assignment Day 26",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13663484"
+	},
+	"item": [
+		{
+			"name": "Menambahkan Produk",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nama\": \"Produk A\",\r\n    \"deskripsi\": \"Deskripsi Produk A\",\r\n    \"harga\": 10000,\r\n    \"kategori\": \"Elektronik\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/produk",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"produk"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Melihat Produk Berdasarkan ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/produk/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"produk",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Melihat Produk Berdasarkan Kategori",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/produk/kategori/Elektronik",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"produk",
+						"kategori",
+						"Elektronik"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Memperbarui Produk",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nama\": \"Produk A Updated\",\r\n    \"deskripsi\": \"Deskripsi Produk A yang sudah diperbarui\",\r\n    \"harga\": 12000,\r\n    \"kategori\": \"Elektronik\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/produk/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"produk",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Menghapus Produk",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/produk/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"produk",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Melihat Inventaris",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/inventaris/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"inventaris",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Memperbarui Inventaris",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id_produk\": 1,\r\n    \"jumlah\": 50,\r\n    \"lokasi\": \"Gudang A\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/inventaris/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"inventaris",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Membuat Pesanan",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id_produk\": 1,\r\n    \"jumlah\": 5,\r\n    \"tanggal_pesanan\": \"2024-11-23\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/pesanan",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pesanan"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Melihat Pesanan Berdasarkan ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/pesanan/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pesanan",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Mengunggah Gambar Produk",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/Awwalul/Downloads/HITAM.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/produk/2/upload-image",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"produk",
+						"2",
+						"upload-image"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Mengunduh Gambar Produk",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/produk/2/download-image",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"produk",
+						"2",
+						"download-image"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
